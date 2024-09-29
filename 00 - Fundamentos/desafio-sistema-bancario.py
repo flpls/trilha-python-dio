@@ -17,7 +17,7 @@ while True:
 
     opcao = input(menu)
 
-    if opcao == "d":
+    if opcao.lower() == "d":
         valor = float(input("Informe valor de depósito: "))
 
         #Mensagem de confirmação de operação realizada acrescentada. 
@@ -29,7 +29,7 @@ while True:
         else:
             print("Operação falhou: O valor informado é inválido")
 
-    elif opcao == "s":
+    elif opcao.lower() == "s":
         valor = float(input("Informe valor de saque: "))
         
         #Diferentemente da resolução optei por declarar as condições individualmente pela legibilidade.
@@ -54,13 +54,13 @@ while True:
         else:
             print("Operação falhou: O valor informado é inválido")
 
-    elif opcao == "e":
+    elif opcao.lower() == "e":
        print("\n================ EXTRATO ================")
        print("Não foram realizadas movimentações." if not extrato else extrato)
        print(f"\nSaldo: R$ {saldo:.2f}")
        print("================================")
 
-    elif opcao == "q":
+    elif opcao.lower() == "q":
         break
 
     else:
